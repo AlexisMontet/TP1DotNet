@@ -1,0 +1,10 @@
+Z:\DotNet\TP1DotNet\TP1DotNet\bin\Debug\TP1DotNet.exe.config
+Z:\DotNet\TP1DotNet\TP1DotNet\bin\Debug\TP1DotNet.exe
+Z:\DotNet\TP1DotNet\TP1DotNet\bin\Debug\TP1DotNet.pdb
+Z:\DotNet\TP1DotNet\TP1DotNet\obj\Debug\TP1DotNet.csprojAssemblyReference.cache
+Z:\DotNet\TP1DotNet\TP1DotNet\obj\Debug\TP1DotNet.Form1.resources
+Z:\DotNet\TP1DotNet\TP1DotNet\obj\Debug\TP1DotNet.Properties.Resources.resources
+Z:\DotNet\TP1DotNet\TP1DotNet\obj\Debug\TP1DotNet.csproj.GenerateResource.cache
+Z:\DotNet\TP1DotNet\TP1DotNet\obj\Debug\TP1DotNet.csproj.CoreCompileInputs.cache
+Z:\DotNet\TP1DotNet\TP1DotNet\obj\Debug\TP1DotNet.exe
+Z:\DotNet\TP1DotNet\TP1DotNet\obj\Debug\TP1DotNet.pdb
