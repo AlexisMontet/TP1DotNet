@@ -31,17 +31,16 @@
             this.Quitter = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aproposToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Strech = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.Print = new System.Windows.Forms.Button();
             this.Apavimp = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Strech = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +59,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ouvrirToolStripMenuItem,
+            this.quitterToolStripMenuItem1,
             this.aProposToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -69,19 +69,17 @@
             // 
             // ouvrirToolStripMenuItem
             // 
-            this.ouvrirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quitterToolStripMenuItem});
             this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
             this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ouvrirToolStripMenuItem.Text = "Ouvrir";
             this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.OuvrirToolStripMenuItem_Click);
             // 
-            // quitterToolStripMenuItem
+            // quitterToolStripMenuItem1
             // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
+            this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(56, 20);
+            this.quitterToolStripMenuItem1.Text = "Quitter";
+            this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
             // 
             // aProposToolStripMenuItem
             // 
@@ -94,8 +92,9 @@
             // aproposToolStripMenuItem1
             // 
             this.aproposToolStripMenuItem1.Name = "aproposToolStripMenuItem1";
-            this.aproposToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.aproposToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.aproposToolStripMenuItem1.Text = "A Propos";
+            this.aproposToolStripMenuItem1.Click += new System.EventHandler(this.AproposToolStripMenuItem1_Click);
             // 
             // textBox1
             // 
@@ -104,23 +103,21 @@
             this.textBox1.Size = new System.Drawing.Size(327, 20);
             this.textBox1.TabIndex = 2;
             // 
-            // Strech
-            // 
-            this.Strech.AutoSize = true;
-            this.Strech.Location = new System.Drawing.Point(359, 29);
-            this.Strech.Name = "Strech";
-            this.Strech.Size = new System.Drawing.Size(57, 17);
-            this.Strech.TabIndex = 3;
-            this.Strech.Text = "Strech";
-            this.Strech.UseVisualStyleBackColor = true;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Normal",
+            "Blue Image",
+            "Red Image",
+            "Green Image",
+            "Inverted color",
+            "Gray scale"});
             this.comboBox1.Location = new System.Drawing.Point(645, 25);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -129,15 +126,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(754, 338);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(20, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Print
             // 
@@ -161,17 +149,27 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // Strech
+            // 
+            this.Strech.AutoSize = true;
+            this.Strech.Location = new System.Drawing.Point(350, 27);
+            this.Strech.Name = "Strech";
+            this.Strech.Size = new System.Drawing.Size(57, 17);
+            this.Strech.TabIndex = 11;
+            this.Strech.Text = "Strech";
+            this.Strech.UseVisualStyleBackColor = true;
+            this.Strech.CheckedChanged += new System.EventHandler(this.Strech_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Strech);
             this.Controls.Add(this.Apavimp);
             this.Controls.Add(this.Print);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.Strech);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Quitter);
             this.Controls.Add(this.menuStrip1);
@@ -192,17 +190,16 @@
         private System.Windows.Forms.Button Quitter;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aproposToolStripMenuItem1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox Strech;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Print;
         private System.Windows.Forms.Button Apavimp;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
+        private System.Windows.Forms.CheckBox Strech;
     }
 }
 
